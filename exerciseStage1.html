@@ -1,0 +1,1058 @@
+
+							<!-- Exercise 1::: https://www.w3schools.com/js/exercise.asp
+    
+     Exercise 1.1-->
+    <!DOCTYPE html>
+	<html>
+	<body>
+
+	<p id="demo">Display the result here.</p>
+
+	<script>
+	var person = {firstName:"John", lastName:"Doe"};
+	document.getElementById("demo").innerHTML= person.firstName;
+	</script>
+
+	</body>
+	</html>
+    <!-- OUTPUT --- John -->
+
+
+
+    <!-- Exercise 1.2 -->
+    <!DOCTYPE html>
+	<html>
+	<body>
+
+	<p id="demo"></p>
+
+	<script>
+	var person = {firstName:"John", lastName:"Doe", country: "USA"};
+	document.getElementById("demo").innerHTML = person.country;
+	</script>
+
+	</body>
+	</html>
+    <!-- Output ---- USA -->
+
+
+
+    <!-- Exercise 1.3 -->
+    <!DOCTYPE html>
+	<html>
+	<body>
+
+	<p id="demo">Display the result here.</p>
+
+	<script>
+	  var person={ name: "John", age: 50 };
+	  document.getElementById("demo").innerHTML=person.name+" is "+person.age+" years old ";
+	</script>
+
+	</body>
+	</html>
+	<!-- Output ---- John is 50 years old -->
+
+
+	    
+	                                            <!-- Exercise 2 -->
+
+
+
+	<!-- Creating an object using object function                              -->
+    <!DOCTYPE html>
+	<html>
+	<body>
+		<script>
+			var myCar = new Object();
+			myCar.make = 'Ford';
+			myCar.myMethod = function(){};
+        </script>
+    </body>
+    </html>
+
+    <!-- Creating object with literal notation -->
+    <!DOCTYPE html>
+	<html>
+	<body>
+		<script>
+			var myCar= { 
+				name: "abhishek",
+				age: 24, 
+				myFunction: function(){}
+			};
+        </script>
+    </body>
+    </html>
+
+
+    <!-- Create objects using the object constructor and prototypes -->
+    <!DOCTYPE html>
+	<html>
+	<body>
+		<p id="demo"></p>
+		<p id="demo2"></p>
+		<script>
+			function Car(make, model, year) {
+			  this.make = make;
+			  this.model = model;
+			  this.year = year;
+			}
+			Car.prototype.myMethod= function(){
+				<script>
+              		document.getElementById("demo2").innerHTML="HELLO";
+                </script>
+			}
+		    var mycar = new Car('Eagle', 'Talon TSi', 1993);
+		    document.getElementById("demo").innerHTML=mycar.make +" "+ mycar.model+" "+mycar.myMethod;
+	    </script>
+    </body>
+    </html>
+
+
+                                                <!-- Exercise 3 -->
+
+  <!-- The Recipe Card -->
+
+
+        <!DOCTYPE html>
+		<html>
+		<body>
+			<p id="demo"></p>
+			
+			<script>
+				var listIngre="";
+				var recipe= { title: "Mole", servings: 2, ingredients: ["cinnamon", "cumin", "cocoa"]};
+	            console.log(recipe.title);
+	            console.log(recipe.servings);
+	            var x;
+	            for(x in recipe.ingredients){
+	            	console.log(recipe.ingredients[x]);
+	            }
+		    </script>
+	    </body>
+	    </html>
+
+
+   <!-- Reading list -->
+        <!DOCTYPE html>
+		<html>
+		<body>
+			<p id="demo"></p>
+			
+			<script>
+				var readingBooks=[{title: "The Hobbit",author: "J.R.R. Tolkien",alreadyRead: true},{title: "three idiots",author: "Chetan",alreadyRead: false},{title: "GOT",author: "R.R. Martin",alreadyRead: false}];
+				var x;
+				for(x in readingBooks){
+					if(x.alreadyRead==true){
+						console.log("You have read "+x.title+" by "+x.author);
+					}
+					else{
+						console.log("You have not read "+x.title+" by "+x.author);
+					}
+				}
+
+		    </script>
+	    </body>
+	    </html>                                  
+
+                                                 <!-- If/else -->
+
+	       <!-- Exercise 1: -->
+					<!DOCTYPE html>
+					<html>
+					<body>
+					<p id="demo"></p>
+					<script>
+					if (5>2) {
+					    document.getElementById("demo").innerHTML = "Well done!";
+					}
+					</script>
+					</body>
+					</html>
+
+
+			<!-- Exercise 2: -->
+						
+						<!DOCTYPE html>
+						<html>
+						<body>
+						<p id="demo">Display the result here.</p>
+						<script>
+						// Add if statement here
+						if(10>5){
+						document.getElementById("demo").innerHTML="I did it!";
+						}
+						</script>
+						</body>
+						</html>
+
+
+						<!-- EX3: -->
+						<!DOCTYPE html>
+						<html>
+						<body>
+						<p id="demo"></p>
+						<script>
+						var firstName = "John";
+						if (firstName === "John") {
+						    document.getElementById("demo").innerHTML = "Hello John!";
+						}
+						</script>
+						</body>
+						</html>
+
+
+						<!-- EX4: -->
+						<!DOCTYPE html>
+						<html>
+						<body>
+						<p id="demo">Display the result here.</p>
+						<script>
+						var firstName = "Greg";
+						if (firstName === "John") {
+						    document.getElementById("demo").innerHTML = "Hello John!";
+						}
+						else
+						    document.getElementById("demo").innerHTML = "You're not John!";
+						</script>
+						</body>
+						</html>
+
+
+						<!-- EX5: -->
+						<!DOCTYPE html>
+						<html>
+						<body>
+						<p id="demo">Display the result here.</p>
+						<script>
+						var age = 2;
+						if(age>18)
+						    document.getElementById("demo").innerHTML = "Old enough";
+						else
+						    document.getElementById("demo").innerHTML = "Too young";
+						</script>
+						</body>
+						</html>
+
+
+						<!-- EX6: -->
+						<!DOCTYPE html>
+						<html>
+						<body>
+						<p id="demo">Display the result here.</p>
+						<script>
+						var greeting;
+						var hour = new Date().getHours();
+						if (hour < 18) {
+						    greeting = "Good day";}
+						else
+						    greeting = "Good evening";
+						document.getElementById("demo").innerHTML = greeting;
+						</script>
+						</body>
+						</html>
+                                   
+
+
+
+                                   <!-- SWITCH EXERCISES-->
+				
+				<!-- EX1: -->
+				<!DOCTYPE html>
+				<html>
+				<body>
+				<input id="myInput" type="text" value="Apple">
+				<button onclick="checkFruit()">Check Fruit</button>
+				<p id="demo"></p>
+				<script>
+				function checkFruit() {
+				  var text;
+				  var fruits = document.getElementById("myInput").value;
+				  switch(fruits) {
+				    case "Banana":
+				      text = "Banana is good!";
+				      break;
+				    case "Orange":
+				      text = "I am not a fan of orange.";
+				      break;
+				    case "Apple" :
+				    text="How you like them apples?";
+				    break;
+				    // add case here
+				    default:
+				      text = "I have never heard of that fruit.";
+				  }
+				  document.getElementById("demo").innerHTML = text;
+				}
+				</script>
+				</body>
+				</html>
+
+
+
+
+				<!-- EX2: -->
+				<!DOCTYPE html>
+				<html>
+				<body>
+				<input id="myInput" type="text" value="Tutti Frutti">
+				<button onclick="checkFruit()">Check Fruit</button>
+				<p id="demo"></p>
+				<script>
+				function checkFruit() {
+				  var text;
+				  var fruits = document.getElementById("myInput").value;
+				  switch(fruits) {
+				    case "Banana":
+				      text = "Banana is good!";
+				      break;
+				    case "Orange":
+				      text = "I am not a fan of orange.";
+				      break;
+				    case "Apple":
+				      text = "How you like them apples?";
+				      break;
+				    // add the default keyword here
+				    
+				    default:
+				    text="I have never heard of that fruit."
+				    break
+				  }
+				  document.getElementById("demo").innerHTML = text;
+				}
+				</script>
+				</body>
+				</html>
+
+
+
+				<!-- EX3: -->
+				<!DOCTYPE html>
+				<html>
+				<body>
+				<input id="myInput" type="text" value="Orange">
+				<button onclick="checkFruit()">Check Fruit</button>
+				<p id="demo"></p>
+				<script>
+				function checkFruit() {
+				  var text;
+				  var fruits = document.getElementById("myInput").value;
+				  switch(fruits) {
+				    case "Banana":
+				      text = "Banana is good!";
+				      break;
+				    case "Orange":
+				      text = "I am not a fan of orange.";
+				      break;
+				    case "Apple":
+				      text = "How you like them apples?";
+				      break;
+				    default:
+				      text = "I have never heard of that fruit.";
+				      break;
+				  }
+				  document.getElementById("demo").innerHTML = text;
+				}
+				</script>
+				</body>
+				</html>
+
+
+				
+				<!-- EX4: -->
+				<!DOCTYPE html>
+				<html>
+				<body>
+				<input id="myInput" type="text" value="BMW">
+				<button onclick="checkCar()">Check Car</button>
+				<p id="demo"></p>
+				<script>
+				function checkCar() {
+				  var text;
+				  var favCar = document.getElementById("myInput").value;
+				  switch(favCar) {
+				    case "BMW":
+				      text = "German car";
+				      break;
+				    case "Ford":
+				      text = "American car";
+				      break;
+				    case "Peugeot":
+				      text = "French car";
+				      break;
+				    default:
+				      text = "Unknown car name";
+				  }
+				  document.getElementById("demo").innerHTML = text;
+				}
+				</script>
+				</body>
+				</html>
+                                                   
+                                                    <!-- Ternary Comparision -->
+
+        <!-- Exercise 1 -->
+        <!DOCTYPE html>
+			<html>
+			<body>
+
+			<p id="demo">Display the result here.</p> 
+
+			<script>
+			document.getElementById("demo").innerHTML = 5 < 7;
+			</script>
+
+			</body>
+			</html>
+
+		<!-- Exercise 2 -->
+		<!DOCTYPE html>
+			<html>
+			<body>
+
+			<p id="demo">Display the result here.</p> 
+
+			<script>
+			document.getElementById("demo").innerHTML = 10 > 7;
+			</script>
+
+			</body>
+			</html>
+
+		<!-- Exercise 3 -->
+		<!DOCTYPE html>
+			<html>
+			<body>
+
+			<p id="demo">Display the result here.</p> 
+
+			<script>
+			document.getElementById("demo").innerHTML = 10==10;
+			</script>
+
+			</body>
+			</html>
+
+		<!-- Exercise 4 -->
+		<!DOCTYPE html>
+			<html>
+			<body>
+
+			<p id="demo">Display the result here.</p> 
+
+			<script>
+			document.getElementById("demo").innerHTML = 10!= 8;
+			</script>
+
+			</body>
+			</html>
+
+		<!-- Exercise 5 -->
+		<!DOCTYPE html>
+			<html>
+			<body>
+			<p id="demo">Age</p>
+
+			<script>
+			var age,votable;
+			function checkAge(age) {
+			  if(isNaN(age)){
+			     votable="Age is not a number";
+			  }
+			  else{
+			      votable= (age<18)?"Too Young":"Old enough";
+			  }
+			  return votable;
+			}
+			document.getElementById("demo").innerHTML=checkAge(20);
+			</script>
+
+			</body>
+			</html>
+
+
+                                                      <!--  ::::For LOOP::::-->
+
+       <!-- Exercise 1 -->
+
+       <!DOCTYPE html>
+			<html>
+			<body>
+
+			<p id="demo"></p>
+
+			<script>
+			var i;
+			for (i = 0; i < 10; i++) {
+			    document.getElementById("demo").innerHTML += i + "<br>";
+			}
+			</script>
+
+			</body>
+			</html>
+
+       <!-- Exercise 2 -->
+
+       <!DOCTYPE html>
+		<html>
+		<body>
+
+		<p id="demo"></p>
+
+		<script>
+		var i;
+		for (i = 5; i < 10; i++) {
+		    document.getElementById("demo").innerHTML += i + "<br>";
+		}
+		</script>
+
+		</body>
+		</html>
+
+		<!-- Exercise 3 -->
+
+		<!DOCTYPE html>
+			<html>
+			<body>
+
+			<p id="demo"></p>
+
+			<script>
+			var i;
+			for (i = 5; i < 50; i=i+5) {
+			    document.getElementById("demo").innerHTML += i + "<br>";
+			}
+			</script>
+
+			</body>
+			</html>
+
+		 <!-- Exercise 4 -->
+
+		 <!DOCTYPE html>
+			<html>
+			<body>
+
+			<p id="demo"></p>
+
+			<script>
+			var i;
+			for (i = 10; i > 0; i--) {
+			    document.getElementById("demo").innerHTML += i + "<br>";
+			}
+			</script>
+
+			</body>
+			</html>
+
+	    <!-- Exercise 5 -->
+	    <!DOCTYPE html>
+			<html>
+			<body>
+
+			<p id="demo"></p>
+
+			<script>
+			var text = "";
+			var food = ["Pizza", "Beans", "Tacos", "Fish", "Chicken"];
+			var i;
+
+			for (i=0;i<food.length;i++) {
+			    text += "I love " + food[i] + "<br>";
+			}
+
+			document.getElementById("demo").innerHTML = text;
+			</script>
+
+			</body>
+			</html>
+
+
+			<!-- Exercise 6 -->
+
+			<!DOCTYPE html>
+				<html>
+				<body>
+
+				<p id="demo"></p>
+
+				<script>
+				var text = "";
+				var i;
+
+				// add for loop here
+				for(i=1;i<10;i=i+2){
+				 text=text+i+"<br>";
+				}
+
+				document.getElementById("demo").innerHTML = text;
+				</script>
+
+				</body>
+				</html>
+
+
+                                               <!-- :::::While Loop::::: -->
+
+              <!-- Exercise 1 -->
+
+              <!DOCTYPE html>
+				<html>
+				<body>
+
+				<p id="demo"></p>
+
+				<script>
+				var i = 0;
+				while (i < 10) {
+				    document.getElementById("demo").innerHTML += i + "<br>";
+				    i++;
+				}
+				</script>
+
+				</body>
+				</html>
+
+
+				<!-- Exercise 2 -->
+
+				<!DOCTYPE html>
+					<html>
+					<body>
+
+					<p id="demo"></p>
+
+					<script>
+					var i = 5;
+					while (i < 10) {
+					    document.getElementById("demo").innerHTML += i + "<br>";
+					    i++;
+					}
+					</script>
+
+					</body>
+					</html>
+
+
+				<!-- Exercise 3 -->
+
+				<!DOCTYPE html>
+					<html>
+					<body>
+
+					<p id="demo"></p>
+
+					<script>
+					var i = 5;
+					while (i < 50) {
+					    document.getElementById("demo").innerHTML += i + "<br>";
+					    i=i+5;
+					}
+					</script>
+
+					</body>
+					</html>
+
+
+				<!-- Exercise 4 -->
+
+				<!DOCTYPE html>
+					<html>
+					<body>
+
+					<p id="demo"></p>
+
+					<script>
+					var i = 10;
+					while (i >0) {
+					    document.getElementById("demo").innerHTML += i + "<br>";
+					    i--;
+					}
+					</script>
+
+					</body>
+					</html>
+
+				<!-- Exercise 5 -->
+
+				<!DOCTYPE html>
+					<html>
+					<body>
+
+					<p id="demo"></p>
+
+					<script>
+					var i = 0;
+					do {
+					    document.getElementById("demo").innerHTML += i + "<br>";
+					    i++;
+					}
+					while (i<5);
+
+					</script>
+
+					</body>
+					</html>
+
+
+					                              <!-- Break Statement -->
+
+
+					<!-- Exercise 1 -->
+
+					<!DOCTYPE html>
+						<html>
+						<body>
+
+						<p id="demo"></p>
+
+						<script>
+						var text = "";
+						var i;
+						for (i = 1; i < 10; i++) {
+						    document.getElementById("demo").innerHTML += i + "<br>";
+						    if(i==5){
+						    break;
+						    }
+						}
+						</script>
+
+						</body>
+						</html>
+
+						<!-- Exercise 2 -->
+
+						<!DOCTYPE html>
+							<html>
+							<body>
+
+							<p id="demo"></p>
+
+							<script>
+							var text = "";
+							var i;
+							for (i = 1; i < 10; i++) {
+							      if(i==5){
+							      continue;
+							      }
+							    document.getElementById("demo").innerHTML += i + "<br>";
+							}
+							</script>
+
+							</body>
+							</html>
+
+
+					<!-- Exercise 3 -->
+
+					<!DOCTYPE html>
+						<html>
+						<body>
+
+						<p id="demo"></p>
+
+						<script>
+						var text = "";
+						var i;
+						for (i = 1; i < 10; i++) {
+						    if(i==5 || i==7){
+						    continue;
+						    }
+						    document.getElementById("demo").innerHTML += i + "<br>";
+						}
+						</script>
+
+						</body>
+						</html>
+
+
+						<!-- Exercise 4 -->
+
+						<!DOCTYPE html>
+							<html>
+							<body>
+
+							<input id="myInput" type="text" value="BMW">
+							<button onclick="checkCar()">Check Car</button>
+							<p id="demo"></p>
+
+							<script>
+							function checkCar() {
+							  var text;
+							  var favCar = document.getElementById("myInput").value;
+
+							  switch(favCar) {
+							    case "BMW":
+							      text = "German car";
+							      break;
+							    case "Ford":
+							      text = "American car";
+							      break;
+							    case "Peugeot":
+							      text = "French car";
+							      break;
+							    default:
+							      text = "Unknown car name";
+							  }
+							  document.getElementById("demo").innerHTML = text;
+							}
+							</script>
+
+							</body>
+							</html>
+
+
+				  <!-- Exercise 5 -->
+				  <!DOCTYPE html>
+					<html>
+					<body>
+
+					<p id="demo"></p>
+
+					<script>
+					var cars = ["BMW", "Volvo", "Saab", "Ford"];
+					var text = ""
+					var i;
+					for (i = 0; i < cars.length; i++) {
+					    if(cars[i]=="Saab"){
+					      continue;
+					    }
+					    text += cars[i] + "<br>";
+					}
+					document.getElementById("demo").innerHTML = text;
+					</script>
+
+					</body>
+					</html>
+
+
+					                                  <!-- Function -->
+
+
+				<!-- Exercise 1 -->
+				<!DOCTYPE html>
+					<html>
+					<body>
+
+					<p id="demo"></p>
+
+					<script>
+					function myFunction() {
+					    document.getElementById("demo").innerHTML = "Hello World!";
+					}
+					// Call the function here
+					myFunction();
+					</script>
+
+					</body>
+					</html>
+
+				<!-- Exercise 2 -->
+				<!DOCTYPE html>
+					<html>
+					<body>
+
+					<p id="demo"></p>
+
+					<script>
+					function myFunction() {
+					    document.getElementById("demo").innerHTML = "Hello World!";
+					}
+					myFunction();
+					</script>
+
+					</body>
+					</html>
+
+			<!-- Exercise 3 -->
+			<!DOCTYPE html>
+				<html>
+				<body>
+
+				<p id="demo"></p>
+
+				<script>
+				function myFunction(a) {
+				    return a*a;
+				}
+				document.getElementById("demo").innerHTML = myFunction(5);
+				</script>
+
+				</body>
+				</html>
+
+
+		<!-- Exercise 4 -->
+
+		<!DOCTYPE html>
+			<html>
+			<body>
+
+			<p id="demo">Display the result here.</p>
+
+			<script>
+			function myFunction(name) {
+			    return "Hello " + name;
+			}
+			document.getElementById("demo").innerHTML= myFunction("John");
+			</script>
+
+			</body>
+			</html>
+
+           <!-- Exercise 5 -->
+
+           <!DOCTYPE html>
+				<html>
+				<body>
+
+				<p id="demo">Display the result here.</p>
+
+				<script>
+				 function myFunction(){
+				   return "Hello World!";
+				   }
+				   document.getElementById("demo").innerHTML= myFunction();
+				</script>
+
+				</body>
+				</html>
+
+
+				                                 <!-- Function 2 -->
+
+               <!-- fortune teller -->
+
+				<!DOCTYPE html>
+					<html>
+					<body>
+
+					<h2>JavaScript Functions</h2>
+
+					<p id="demo"></p>
+					<p id="demo2"></p>
+					<p id="demo3"></p>
+
+					<script>
+					function tellFortune(child_no, partner,location,jtitle) {
+					    return "You will be a "+jtitle+" in "+location+" ,and married to "+partner+" and have "+child_no+" child.";
+					}
+					document.getElementById("demo").innerHTML = tellFortune(3,"eva","delhi","SD");
+
+					document.getElementById("demo2").innerHTML = tellFortune(3,"eva","delhi","SD");
+
+
+					document.getElementById("demo3").innerHTML = tellFortune(3,"eva","delhi","SD");
+					</script>
+
+					</body>
+					</html>
+
+					<!-- CalculateDogAge -->
+
+				<!DOCTYPE html>
+					<html>
+					<body>
+					   <script>
+			                 function calculateDogAge(age)
+								{
+								    var humanAge= age*7;
+								   
+								   return "Your dog is " + humanAge + " years old in dog years!"
+								}
+
+								calculateDogAge(5);
+								calculateDogAge(1);
+								calculateDogAge(7);
+					     </script>
+					    </body>
+					   </html>
+
+                    <!-- LifeTime supply calculator -->
+                  <!DOCTYPE html>
+					<html>
+					<body>
+					   <script>
+							function calculateSupply(cAge,amtperDay)
+							{
+							    const maxAge= 60;
+							   
+							   var totalSnack="";
+							   var i="";
+							   for(i=cAge ; i<= maxAge ; i++)
+							   {
+							       // each year has 365 days except leap year
+							       // total for 1 year
+							       totalSnack += amtperDay*365;
+							   }
+							   
+							   return "You will need " + totalSnack + " gms to last you until the ripe age of 60";
+							}
+
+							calculateSupply(20,50);
+							calculateSupply(40,20);
+							calculateSupply(50,60);
+						</script>
+					</body>
+				</html>
+
+				<!-- FarenheitToCelsius -->
+				<!DOCTYPE html>
+					<html>
+					<body>
+
+					<h2>JavaScript Functions</h2>
+
+					<p>Accessing a function without () will return the function definition instead of the function result:</p>
+					<p id="demo"></p>
+					<p id="demo2"></p>
+
+					<script>
+					function farenheitToCelsius(f) {
+					    return (5/9) * (f-32);
+					}
+					function celsiusToFarenheit(c){
+					    return  c *9/5 + 32;
+					}
+					document.getElementById("demo").innerHTML = "100*F to "+farenheitToCelsius(100)+"*C";
+					document.getElementById("demo2").innerHTML = "22*C to "+celsiusToFarenheit(22)+"*F";
+					</script>
+
+					</body>
+					</html>
+
+
+				<!-- CalculateArea -->
+
+				<!DOCTYPE html>
+					<html>
+					<body>
+
+					<h2>JavaScript Functions</h2>
+
+					<p id="demo"></p>
+					<p id="demo2"></p>
+
+					<script>
+					  function calculateCircumference(radius){
+					  var pi=22/7;
+					  var circumference= 2*pi*radius;
+					  document.getElementById("demo").innerHTML="The circumference is "+circumference;
+					  
+					  }
+					  
+					  function calculateArea(radius){
+					      var pi=22/7;
+					      var circumference= pi*radius*radius;
+					      document.getElementById("demo2").innerHTML="The area       is "+circumference;
+					  
+					  }
+					  
+					  calculateCircumference(5);
+					  calculateArea(5);
+					  
+					</script>
+
+					</body>
+					</html>
