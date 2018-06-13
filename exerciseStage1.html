@@ -144,17 +144,248 @@
 				var readingBooks=[{title: "The Hobbit",author: "J.R.R. Tolkien",alreadyRead: true},{title: "three idiots",author: "Chetan",alreadyRead: false},{title: "GOT",author: "R.R. Martin",alreadyRead: false}];
 				var x;
 				for(x in readingBooks){
-					if(x.alreadyRead==true){
-						console.log("You have read "+x.title+" by "+x.author);
+					if(readingBooks[x].alreadyRead==true){
+						console.log("You have read "+readingBooks[x].title+" by "+readingBooks[x].author);
 					}
 					else{
-						console.log("You have not read "+x.title+" by "+x.author);
+						console.log("You have not read "+readingBooks[x].title+" by "+readingBooks[x].author);
 					}
 				}
 
 		    </script>
 	    </body>
-	    </html>                                  
+	    </html>                                
+
+
+	                                            <!-- JavaScript Objects -->
+	       <!-- Exercise 1 -->
+              <!DOCTYPE html>
+				<html>
+				<body>
+					<p id="demo"></p>
+			          <script>
+			          	var student = { 
+							name : "David Rayy", 
+							sclass : "VI", 
+							rollno : 12 };
+
+							console.log(Object.keys(student));
+			          </script>
+			    </body>
+			    </html>
+
+		   <!-- Exercise 2 -->
+
+		     <!DOCTYPE html>
+				<html>
+				<body>
+					<p id="demo"></p>
+			          <script>
+			          	var student = { 
+							name : "David Rayy", 
+							sclass : "VI", 
+							rollno : 12 };
+                            console.log(student);
+                            delete student.rollno;
+                            console.log(student);
+			          </script>
+			    </body>
+			    </html>
+
+		   <!-- Exercise 3 -->
+             <!DOCTYPE html>
+				<html>
+				<body>
+					<p id="demo"></p>
+			          <script>
+					       var student = { 
+								name : "David Rayy", 
+								sclass : "VI", 
+								rollno : 12 };
+
+								console.log(Object.keys(student).length);
+				    </script>
+			    </body>
+			    </html>
+
+	       <!-- Exercise 4 -->
+	              <!DOCTYPE html>
+					<html>
+					<body>
+						<p id="demo"></p>
+						
+						<script>
+							var readingBooks=[{title: "The Hobbit",author: "J.R.R. Tolkien",alreadyRead: true},{title: "three idiots",author: "Chetan",alreadyRead: false},{title: "GOT",author: "R.R. Martin",alreadyRead: false}];
+							var x;
+							for(x in readingBooks){
+								if(readingBooks[x].alreadyRead==true){
+									console.log("You have read "+readingBooks[x].title+" by "+readingBooks[x].author);
+								}
+								else{
+									console.log("You have not read "+readingBooks[x].title+" by "+readingBooks[x].author);
+								}
+							}
+
+					    </script>
+				    </body>
+				    </html> 
+
+		   <!-- Exercise 5 -->
+				<!DOCTYPE html>
+					<html>
+					<body>
+						<p id="demo"></p>
+						
+						<script>
+
+								function Cylinder(cyl_height, cyl_diameter) {
+								  this.cyl_height = cyl_height;
+								  this.cyl_diameter = cyl_diameter;
+								}
+
+								Cylinder.prototype.Volume = function () {
+								  var radius = this.cyl_diameter / 2;
+								  return this.cyl_height * Math.PI * radius * radius;
+								};
+
+								var cyl = new Cylinder(7, 4);
+
+								console.log('volume = ' + cyl.Volume().toFixed(4));
+					    </script>
+				    </body>
+				    </html> 
+
+			<!-- Exercise 7 -->
+			<!DOCTYPE html>
+					<html>
+					<body>
+						<p id="demo"></p>
+						
+						<script>
+						String.prototype.sub_string= function()
+							{
+							  var subset=[];
+							  for(var i=0; i<this.length ; i++)
+							    {
+							      for(var j=i+1 ; j<this.length +1 ;j++)
+							        subset.push(this.slice(i,j))
+							    }
+							  
+							  return subset;
+							}
+							  </script>
+				    </body>
+				    </html> 
+
+		   <!-- Exercise 9 -->
+		   <!DOCTYPE html>
+					<html>
+					<body>
+						<p id="demo"></p>
+						<script </script>
+					    function my_Clock() 
+							  {
+							  this.cur_date = new Date();
+							  this.hours = this.cur_date.getHours();
+							  this.minutes = this.cur_date.getMinutes();
+							  this.seconds = this.cur_date.getSeconds();
+							  }
+							my_Clock.prototype.run = function ()
+							  {
+							  setInterval(this.update.bind(this), 1000);
+							  };
+							my_Clock.prototype.update = function () 
+							  {
+							  this.updateTime(1);
+							  console.log(this.hours + ":" + this.minutes + ":" + this.seconds);
+							  };
+							my_Clock.prototype.updateTime = function (secs) 
+							  {
+							  this.seconds+= secs;
+							 if (this.seconds >= 60)
+							  {
+							  this.minutes++;
+							  this.seconds= 0;
+							  }
+							 if (this.minutes >= 60)
+							  {
+							  this.hours++;
+							  this.minutes=0;
+							  }
+							if (this.hours >= 24)
+							  {
+							  this.hours = 0;
+							  }
+							};
+							var clock = new my_Clock();
+							  clock.run();
+							    </script>
+			    </body>
+			    </html> 
+
+	       <!-- Exercise 10 -->
+	        <!DOCTYPE html>
+				<html>
+				<body>
+
+				<h2>JavaScript Array Sort</h2>
+
+				<p>Click the buttons to sort car objects on age.</p>
+
+				<button onclick="myFunction()">Sort</button>
+
+				<p id="demo"></p>
+
+				<script>
+				var library = [ 
+				   {
+				       title: 'Bill Gates',
+				       author: 'The Road Ahead',
+				       libraryID: 1254
+				   },
+				   {
+				       title: 'Steve Jobs',
+				       author: 'Walter Isaacson',
+				       libraryID: 4264
+				   },
+				   {
+				       title: 'Mockingjay: The Final Book of The Hunger Games',
+				       author: 'Suzanne Collins',
+				       libraryID: 3245
+				   }];
+
+				displayCars();
+
+				function myFunction() {
+				    library.sort(function(a, b){return b.libraryID - a.libraryID});
+				    displayCars();
+				}
+
+				function displayCars() {
+				  document.getElementById("demo").innerHTML =
+				  library[0].title + " " +  library[0].libraryID + "<br>" +
+				   library[1].title + " " + library[1].libraryID + "<br>" +
+				   library[2].title + " " +  library[2].libraryID;
+				}
+				</script>
+
+				</body>
+				</html>
+                
+                <!-- Exercise 11 -->
+                 function all_properties(obj) 
+					{
+					 return Object.getOwnPropertyNames(obj);
+					}
+
+					console.log(all_properties(Math));
+
+					console.log(all_properties(Array));
+
+				<!-- Exercise 12 -->
+
+				<!-- Exercise 13 -->
+
 
                                                  <!-- If/else -->
 
